@@ -77,24 +77,15 @@ const ContactSection = () => {
     setIsLoading(true)
 
     try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      })
-
-      if (response.ok) {
-        showNotification("Thank you! Your message has been sent successfully.", "success")
-        setFormData({ name: "", email: "", subject: "", message: "" })
-      } else {
-        const errorData = await response.json()
-        showNotification(errorData.error || "Failed to send message. Please try again.", "error")
-      }
+      // For GitHub Pages deployment, use mailto link
+      const mailtoLink = `mailto:pallavkumar6200@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`)}`
+      
+      window.location.href = mailtoLink
+      showNotification("Opening your email client to send the message...", "success")
+      setFormData({ name: "", email: "", subject: "", message: "" })
     } catch (error) {
-      console.error('Error sending message:', error)
-      showNotification("Failed to send message. Please try again.", "error")
+      console.error('Error:', error)
+      showNotification("Please try again or contact directly via email.", "error")
     } finally {
       setIsLoading(false)
     }
