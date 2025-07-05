@@ -121,7 +121,7 @@ const HeroSection = () => {
                 Get In Touch
               </button>
               <a
-                href="/Pallav_Resume.pdf"
+                href="/Pallav_Kumar_Resume.pdf"
                 download="Pallav_Kumar_Resume.pdf"
                 className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-semibold transition-all transform hover:scale-105 text-center flex items-center justify-center gap-2"
               >
