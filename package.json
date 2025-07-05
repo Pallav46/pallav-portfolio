@@ -2,6 +2,23 @@
   "name": "pallav-portfolio",
   "version": "0.1.0",
   "private": true,
+  "description": "A modern, responsive portfolio website built with Next.js, React, and Tailwind CSS",
+  "author": "Pallav Kumar <pallavkumar6200@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Pallav46/pallav-portfolio.git"
+  },
+  "homepage": "https://pallav46.github.io/pallav-portfolio/",
+  "keywords": [
+    "portfolio",
+    "nextjs",
+    "react",
+    "tailwindcss",
+    "typescript",
+    "responsive",
+    "github-pages"
+  ],
   "scripts": {
     "build": "next build",
     "dev": "next dev",

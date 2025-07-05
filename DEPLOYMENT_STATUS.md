@@ -14,6 +14,13 @@
 ### Your Site:
 - **Repository**: https://github.com/Pallav46/pallav-portfolio
 - **Live Site**: https://pallav46.github.io/pallav-portfolio/
+- **License**: MIT License (see [LICENSE](LICENSE) file)
+
+### Project Links:
+- **GitHub Repository**: [https://github.com/Pallav46/pallav-portfolio](https://github.com/Pallav46/pallav-portfolio)
+- **Live Portfolio**: [https://pallav46.github.io/pallav-portfolio/](https://pallav46.github.io/pallav-portfolio/)
+- **Issues**: [https://github.com/Pallav46/pallav-portfolio/issues](https://github.com/Pallav46/pallav-portfolio/issues)
+- **Contributing**: [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ### Workflow Status:
 Check the Actions tab in your GitHub repository to see the deployment status.
