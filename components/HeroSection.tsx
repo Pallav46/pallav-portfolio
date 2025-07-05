@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
+import { getAssetPath } from "@/lib/utils"
 
 const HeroSection = () => {
   const [displayText, setDisplayText] = useState("")
@@ -121,7 +122,7 @@ const HeroSection = () => {
                 Get In Touch
               </button>
               <a
-                href="/Pallav_Kumar_Resume.pdf"
+                href={getAssetPath("/Pallav_Kumar_Resume.pdf")}
                 download="Pallav_Kumar_Resume.pdf"
                 className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-semibold transition-all transform hover:scale-105 text-center flex items-center justify-center gap-2"
               >
