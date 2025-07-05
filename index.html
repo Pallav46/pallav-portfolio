@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pallav Kumar - Full Stack Developer</title>
+    <meta name="description" content="Pallav Kumar - Computer Science Engineering student at IIIT Guwahati, Full Stack Developer with expertise in React, Node.js, and modern web technologies.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary': '#3B82F6',
+                        'secondary': '#1E293B',
+                        'accent': '#F59E0B',
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.6s ease-in-out',
+                        'slide-up': 'slideUp 0.6s ease-out',
+                        'bounce-slow': 'bounce 2s infinite',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #3B82F6, #8B5CF6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .glass-effect {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body class="font-inter bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass-effect">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-2xl font-bold gradient-text">
+                    Pallav Kumar
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="hover:text-primary transition-colors">Home</a>
+                    <a href="#about" class="hover:text-primary transition-colors">About</a>
+                    <a href="#skills" class="hover:text-primary transition-colors">Skills</a>
+                    <a href="#experience" class="hover:text-primary transition-colors">Experience</a>
+                    <a href="#projects" class="hover:text-primary transition-colors">Projects</a>
+                    <a href="#contact" class="hover:text-primary transition-colors">Contact</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden glass-effect">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#home" class="block px-3 py-2 hover:text-primary transition-colors">Home</a>
+                <a href="#about" class="block px-3 py-2 hover:text-primary transition-colors">About</a>
+                <a href="#skills" class="block px-3 py-2 hover:text-primary transition-colors">Skills</a>
+                <a href="#experience" class="block px-3 py-2 hover:text-primary transition-colors">Experience</a>
+                <a href="#projects" class="block px-3 py-2 hover:text-primary transition-colors">Projects</a>
+                <a href="#contact" class="block px-3 py-2 hover:text-primary transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center px-4">
+        <div class="text-center max-w-4xl mx-auto animate-fade-in">
+            <div class="mb-8">
+                <div class="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-r from-primary to-purple-600 flex items-center justify-center text-4xl font-bold">
+                    PK
+                </div>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold mb-6">
+                Hi, I'm <span class="gradient-text">Pallav Kumar</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-300 mb-8">
+                Full Stack Developer & Computer Science Engineering Student
+            </p>
+            <p class="text-lg text-gray-400 mb-12 max-w-2xl mx-auto">
+                Passionate about building scalable web applications and solving complex problems. 
+                Currently pursuing B.Tech at IIIT Guwahati with expertise in modern web technologies.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#projects" class="bg-primary hover:bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold transition-all transform hover:scale-105">
+                    View My Work
+                </a>
+                <a href="#contact" class="border border-primary text-primary hover:bg-primary hover:text-white px-8 py-3 rounded-lg font-semibold transition-all">
+                    Get In Touch
+                </a>
+            </div>
+            <div class="flex justify-center space-x-6 mt-12">
+                <a href="https://github.com/Pallav46" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                    <i data-lucide="github" class="w-6 h-6"></i>
+                </a>
+                <a href="https://leetcode.com/PallavKumar6200" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                    <i data-lucide="code" class="w-6 h-6"></i>
+                </a>
+                <a href="mailto:pallav.kumar22b@iiitg.ac.in" class="text-gray-400 hover:text-white transition-colors">
+                    <i data-lucide="mail" class="w-6 h-6"></i>
+                </a>
+                <a href="tel:+916200845646" class="text-gray-400 hover:text-white transition-colors">
+                    <i data-lucide="phone" class="w-6 h-6"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-16 gradient-text">About Me</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <p class="text-lg text-gray-300 leading-relaxed">
+                        I'm a passionate Computer Science Engineering student at IIIT Guwahati with a strong foundation in full-stack development. 
+                        Currently maintaining a CGPA of 8.13/10.0 and actively working as a Frontend Developer Intern.
+                    </p>
+                    <p class="text-lg text-gray-300 leading-relaxed">
+                        My journey in tech has been driven by curiosity and a desire to solve real-world problems through code. 
+                        I specialize in building scalable web applications using modern technologies like React, Node.js, and various databases.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 mt-8">
+                        <div class="text-center p-4 glass-effect rounded-lg">
+                            <div class="text-2xl font-bold text-primary">8.13</div>
+                            <div class="text-sm text-gray-400">CGPA</div>
+                        </div>
+                        <div class="text-center p-4 glass-effect rounded-lg">
+                            <div class="text-2xl font-bold text-primary">3★</div>
+                            <div class="text-sm text-gray-400">CodeChef</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="space-y-6">
+                    <div class="glass-effect p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-4 flex items-center">
+                            <i data-lucide="graduation-cap" class="w-5 h-5 mr-2 text-primary"></i>
+                            Education
+                        </h3>
+                        <div>
+                            <h4 class="font-semibold">B.Tech in Computer Science and Engineering</h4>
+                            <p class="text-gray-400">Indian Institute of Information Technology Guwahati</p>
+                            <p class="text-sm text-gray-500">May 2026 • CGPA: 8.13/10.0</p>
+                        </div>
+                    </div>
+                    <div class="glass-effect p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-4 flex items-center">
+                            <i data-lucide="briefcase" class="w-5 h-5 mr-2 text-primary"></i>
+                            Current Role
+                        </h3>
+                        <div>
+                            <h4 class="font-semibold">Frontend Developer Intern</h4>
+                            <p class="text-gray-400">The Tann Mann Gaadi – Wellness on Wheels</p>
+                            <p class="text-sm text-gray-500">April 2025 – Present • Remote</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-4 bg-black/20">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-16 gradient-text">Technical Skills</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="glass-effect p-6 rounded-lg text-center hover:scale-105 transition-transform">
+                    <i data-lucide="code" class="w-12 h-12 mx-auto mb-4 text-primary"></i>
+                    <h3 class="text-xl font-semibold mb-4">Languages</h3>
+                    <div class="space-y-2 text-gray-300">
+                        <div>Java</div>
+                        <div>JavaScript</div>
+                    </div>
+                </div>
+                <div class="glass-effect p-6 rounded-lg text-center hover:scale-105 transition-transform">
+                    <i data-lucide="monitor" class="w-12 h-12 mx-auto mb-4 text-primary"></i>
+                    <h3 class="text-xl font-semibold mb-4">Frontend</h3>
+                    <div class="space-y-2 text-gray-300">
+                        <div>React</div>
+                        <div>HTML/CSS</div>
+                        <div>Tailwind CSS</div>
+                    </div>
+                </div>
+                <div class="glass-effect p-6 rounded-lg text-center hover:scale-105 transition-transform">
+                    <i data-lucide="server" class="w-12 h-12 mx-auto mb-4 text-primary"></i>
+                    <h3 class="text-xl font-semibold mb-4">Backend</h3>
+                    <div class="space-y-2 text-gray-300">
+                        <div>Node.js</div>
+                        <div>Express</div>
+                        <div>REST APIs</div>
+                        <div>Apache Kafka</div>
+                    </div>
+                </div>
+                <div class="glass-effect p-6 rounded-lg text-center hover:scale-105 transition-transform">
+                    <i data-lucide="database" class="w-12 h-12 mx-auto mb-4 text-primary"></i>
+                    <h3 class="text-xl font-semibold mb-4">Databases</h3>
+                    <div class="space-y-2 text-gray-300">
+                        <div>MongoDB</div>
+                        <div>PostgreSQL</div>
+                        <div>MySQL</div>
+                        <div>Redis</div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 text-center">
+                <h3 class="text-2xl font-semibold mb-6">Tools & Platforms</h3>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <span class="bg-primary/20 text-primary px-4 py-2 rounded-full">Git</span>
+                    <span class="bg-primary/20 text-primary px-4 py-2 rounded-full">Docker</span>
+                    <span class="bg-primary/20 text-primary px-4 py-2 rounded-full">AWS Lambda</span>
+                    <span class="bg-primary/20 text-primary px-4 py-2 rounded-full">VS Code</span>
+                    <span class="bg-primary/20 text-primary px-4 py-2 rounded-full">Nginx</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-16 gradient-text">Experience & Leadership</h2>
+            <div class="space-y-8">
+                <div class="glass-effect p-8 rounded-lg">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                        <div>
+                            <h3 class="text-2xl font-semibold">Frontend Developer Intern</h3>
+                            <p class="text-primary font-medium">The Tann Mann Gaadi – Wellness on Wheels</p>
+                        </div>
+                        <div class="text-gray-400 mt-2 md:mt-0">
+                            <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm">April 2025 – Present</span>
+                        </div>
+                    </div>
+                    <ul class="space-y-2 text-gray-300">
+                        <li class="flex items-start">
+                            <i data-lucide="check-circle" class="w-5 h-5 mr-2 text-primary mt-0.5 flex-shrink-0"></i>
+                            Developed responsive and accessible UI for company's main landing page using React.js and Tailwind CSS
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check-circle" class="w-5 h-5 mr-2 text-primary mt-0.5 flex-shrink-0"></i>
+                            Integrated frontend with RESTful APIs via Axios for dynamic content rendering
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check-circle" class="w-5 h-5 mr-2 text-primary mt-0.5 flex-shrink-0"></i>
+                            Collaborated in agile team environment using Git for version control
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="glass-effect p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-2">Programming Club Coordinator</h3>
+                        <p class="text-primary font-medium mb-2">IIIT Guwahati</p>
+                        <p class="text-sm text-gray-400 mb-4">January 2024 – July 2024</p>
+                        <p class="text-gray-300">Mentored 200+ students through 8 coding workshops and 2 hackathons</p>
+                    </div>
+                    <div class="glass-effect p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-2">Team Head, Entropy Technical Fest</h3>
+                        <p class="text-primary font-medium mb-2">IIIT Guwahati</p>
+                        <p class="text-sm text-gray-400 mb-4">June 2024 – October 2024</p>
+                        <p class="text-gray-300">Led a 10-member team to design, develop, and launch the official festival website</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-4 bg-black/20">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-16 gradient-text">Featured Projects</h2>
+            <div class="grid lg:grid-cols-3 gap-8">
+                <div class="glass-effect p-6 rounded-lg hover:scale-105 transition-transform">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-semibold">Cryuze</h3>
+                        <a href="#" class="text-primary hover:text-blue-400">
+                            <i data-lucide="external-link" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                    <p class="text-gray-300 mb-4">
+                        Full-stack hyperlocal service platform connecting customers with local professionals using geolocation and real-time chat.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-primary/20 text-primary px-2 py-1 rounded text-sm">Node.js</span>
+                        <span class="bg-primary/20 text-primary px-2 py-1 rounded text-sm">MongoDB</span>
+                        <span class="bg-primary/20 text-primary px-2 py-1 rounded text-sm">React</span>
+                        <span class="bg-primary/20 text-primary px-2 py-1 rounded text-sm">Razorpay</span>
+                    </div>
+                    <ul class="text-sm text-gray-400 space-y-1">
+                        <li>• Real-time chat with WebSockets</li>
+                        <li>• Geolocation-based notifications</li>
+                        <li>• Secure payment integration</li>
+                    </ul>
+                </div>
+
+                <div class="glass-effect p-6 rounded-lg hover:scale-105 transition-transform">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-semibold">ProxyServer</h3>
+                        <a href="#" class="text-primary hover:text-blue-400">
+                            <i data-lucide="external-link" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                    <p class="text-gray-300 mb-4">
+                        High-performance reverse proxy built from scratch with clustering, load balancing, and caching mechanisms.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-primary/20 text-primary px-2 py-1 rounded text-sm">Node.js</span>
+                        <span class="bg-primary/20 text-primary px-2 py-1 rounded text-sm">TypeScript</span>
+                    </div>
+                    <ul class="text-sm text-gray-400 space-y-1">
+                        <li>• Master-worker clustering model</li>
+                        <li>• Round-robin load balancing</li>
+                        <li>• In-memory caching & rate limiting</li>
+                    </ul>
+                </div>
+
+                <div class="glass-effect p-6 rounded-lg hover:scale-105 transition-transform">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-semibold">MoodScape</h3>
+                        <a href="#" class="text-primary hover:text-blue-400">
+                            <i data-lucide="external-link" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                    <p class="text-gray-300 mb-4">
+                        Microservices-driven application performing real-time facial analysis to detect emotions and deliver personalized music.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-primary/20 text-primary px-2 py-1 rounded text-sm">Node.js</span>
+                        <span class="bg-primary/20 text-primary px-2 py-1 rounded text-sm">Flask</span>
+                        <span class="bg-primary/20 text-primary px-2 py-1 rounded text-sm">Kafka</span>
+                        <span class="bg-primary/20 text-primary px-2 py-1 rounded text-sm">Redis</span>
+                    </div>
+                    <ul class="text-sm text-gray-400 space-y-1">
+                        <li>• Real-time facial emotion detection</li>
+                        <li>• Microservices architecture</li>
+                        <li>• Personalized music recommendations</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-16 gradient-text">Achievements</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass-effect p-6 rounded-lg text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-accent/20 rounded-full flex items-center justify-center">
+                        <i data-lucide="trophy" class="w-8 h-8 text-accent"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">CodeChef Starters 111</h3>
+                    <p class="text-accent font-semibold">242nd Rank</p>
+                    <p class="text-gray-400 text-sm">Out of 15,000+ participants</p>
+                </div>
+                <div class="glass-effect p-6 rounded-lg text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-primary/20 rounded-full flex items-center justify-center">
+                        <i data-lucide="star" class="w-8 h-8 text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">CodeChef Rating</h3>
+                    <p class="text-primary font-semibold">3-Star Coder</p>
+                    <p class="text-gray-400 text-sm">Competitive Programming</p>
+                </div>
+                <div class="glass-effect p-6 rounded-lg text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-green-500/20 rounded-full flex items-center justify-center">
+                        <i data-lucide="award" class="w-8 h-8 text-green-500"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Debuggers Hackathon</h3>
+                    <p class="text-green-500 font-semibold">1st Place</p>
+                    <p class="text-gray-400 text-sm">Problem-solving & Teamwork</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4 bg-black/20">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-8 gradient-text">Let's Connect</h2>
+            <p class="text-xl text-gray-300 mb-12">
+                I'm always open to discussing new opportunities, interesting projects, or just having a chat about technology.
+            </p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                <a href="mailto:pallav.kumar22b@iiitg.ac.in" class="glass-effect p-6 rounded-lg hover:scale-105 transition-transform">
+                    <i data-lucide="mail" class="w-8 h-8 mx-auto mb-3 text-primary"></i>
+                    <p class="font-semibold">Email</p>
+                    <p class="text-sm text-gray-400">pallav.kumar22b@iiitg.ac.in</p>
+                </a>
+                <a href="tel:+916200845646" class="glass-effect p-6 rounded-lg hover:scale-105 transition-transform">
+                    <i data-lucide="phone" class="w-8 h-8 mx-auto mb-3 text-primary"></i>
+                    <p class="font-semibold">Phone</p>
+                    <p class="text-sm text-gray-400">+91-6200845646</p>
+                </a>
+                <a href="https://github.com/Pallav46" target="_blank" class="glass-effect p-6 rounded-lg hover:scale-105 transition-transform">
+                    <i data-lucide="github" class="w-8 h-8 mx-auto mb-3 text-primary"></i>
+                    <p class="font-semibold">GitHub</p>
+                    <p class="text-sm text-gray-400">Pallav46</p>
+                </a>
+                <a href="https://leetcode.com/PallavKumar6200" target="_blank" class="glass-effect p-6 rounded-lg hover:scale-105 transition-transform">
+                    <i data-lucide="code" class="w-8 h-8 mx-auto mb-3 text-primary"></i>
+                    <p class="font-semibold">LeetCode</p>
+                    <p class="text-sm text-gray-400">PallavKumar6200</p>
+                </a>
+            </div>
+            <div class="glass-effect p-8 rounded-lg">
+                <h3 class="text-2xl font-semibold mb-6">Send me a message</h3>
+                <form id="contact-form" class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <input type="text" placeholder="Your Name" required class="w-full p-3 bg-white/10 border border-white/20 rounded-lg focus:outline-none focus:border-primary">
+                        <input type="email" placeholder="Your Email" required class="w-full p-3 bg-white/10 border border-white/20 rounded-lg focus:outline-none focus:border-primary">
+                    </div>
+                    <input type="text" placeholder="Subject" required class="w-full p-3 bg-white/10 border border-white/20 rounded-lg focus:outline-none focus:border-primary">
+                    <textarea placeholder="Your Message" rows="5" required class="w-full p-3 bg-white/10 border border-white/20 rounded-lg focus:outline-none focus:border-primary resize-none"></textarea>
+                    <button type="submit" class="bg-primary hover:bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold transition-all transform hover:scale-105">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 px-4 border-t border-white/10">
+        <div class="max-w-6xl mx-auto text-center">
+            <p class="text-gray-400">
+                © 2025 Pallav Kumar. Built with passion and modern web technologies.
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
