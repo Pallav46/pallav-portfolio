@@ -12,6 +12,8 @@ const nextConfig = {
   output: 'export',
   trailingSlash: true,
   distDir: 'out',
+  basePath: process.env.NODE_ENV === 'production' ? '/pallav-portfolio' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/pallav-portfolio' : '',
 }
 
 export default nextConfig
